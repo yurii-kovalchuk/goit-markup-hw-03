@@ -24,6 +24,10 @@ body    {
 }
 
 /* reset styles */
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
 .link   {
     text-decoration: none;
     color: currentColor;
@@ -31,6 +35,8 @@ body    {
 
 .list   {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .address    {
@@ -38,11 +44,23 @@ body    {
 }
 
 /* base style */
+
 .btn    {
     font-family: inherit;
     color: inherit;
     background-color: var(--light-bg-cl);
     cursor: pointer; 
+}
+
+.container  {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    outline: 2px solid red;
+    outline-offset: -2px;
 }
 
 /* hidden */
@@ -60,7 +78,16 @@ body    {
 }
 
 
-/* Header */
+/* Header section*/
+
+.header-container   {
+    display: flex;
+}
+
+.header-nav {
+    display: flex;
+}
+
 .header-logo,
 .footer-logo    {
     font-family: var(--secondary-font);
@@ -73,6 +100,10 @@ body    {
 
 .accent-logo    {
     color: var(--accent-txt-cl);
+}
+
+.nav-list   {
+    display: flex;
 }
 
 .nav-link,
@@ -96,9 +127,15 @@ body    {
     color: var(--accent-txt-cl);
 }
 
+.contacts-list  {
+    display: flex;
+}
+
 .contacts-link{
     color:var(--secondary-txt-cl);
 }
+
+/* Hero section */
 
 .hero   {
     background-color:var(--dark-bg-cl);
