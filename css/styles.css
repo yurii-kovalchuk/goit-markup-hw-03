@@ -68,8 +68,11 @@ img {
     display: block;
     font-family: inherit;
     color: inherit;
+    border: transparent;
     background-color: var(--light-bg-cl);
     cursor: pointer; 
+
+    border-radius: 4px;
 }
 
 .container  {
@@ -202,7 +205,7 @@ img {
 }
 
 .hero-btn   {
-    padding: 10px 22px;
+    padding: 10px 32px;
     margin: 0 auto;
     font-weight: 700;
     font-size: 16px;
@@ -210,6 +213,9 @@ img {
     letter-spacing: 0.06em;
     background-color:var(--accent-txt-cl);
     color: var(--white-cl);
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 
 .btn:hover,
@@ -263,7 +269,7 @@ img {
 .team-item  {
     background-color:var(--white-cl);
     border-radius: 0px 0px 4px 4px;
-    /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     
 }
 
@@ -299,9 +305,26 @@ img {
     background-color:var(--dark-bg-cl);
 }
 
+.footer-container   {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .footer-logo    {
     color: var(--white-cl);
+    margin-right: auto;
     /* margin-bottom: 20px; */
+}
+
+.address    {
+    margin-right: auto;
+}
+
+.address-list   {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
 }
 
 .address-desc   {
@@ -316,11 +339,6 @@ img {
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-}
-
-.btn-current {
-    background-color: var(--accent-txt-cl);
-    color: var(--white-cl);
 }
 
 /* Filters section */
@@ -342,6 +360,17 @@ img {
     letter-spacing: 0.03em; 
 }
 
+.btn-current {
+    background-color: var(--accent-txt-cl);
+    color: var(--white-cl);
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.projects-item:hover,
+.projects-item:focus  {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 .project-wrap   {
     padding: 20px 24px 19px;
     border: 1px solid #EEEEEE;
