@@ -16,6 +16,8 @@
     --light-bg-cl: #F5F4FA;
 
     /* others */
+    --indent: 30px;
+    --items: 3;
 } 
 
 body    {
@@ -28,6 +30,11 @@ body    {
 h1,h2,h3,h4,h5,h6,p {
     margin: 0;
 }
+
+img {
+    display: block;
+}
+
 .link   {
     text-decoration: none;
     color: currentColor;
@@ -43,9 +50,22 @@ h1,h2,h3,h4,h5,h6,p {
     font-style:normal;
 }
 
+/* Card set */
+
+.card-set   {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--indent);
+}
+
+.card-set-item  {
+    flex-basis: calc((100% - var(--indent) * (var(--items)-1)) / var(--items));
+}
+
 /* base style */
 
 .btn    {
+    display: block;
     font-family: inherit;
     color: inherit;
     background-color: var(--light-bg-cl);
@@ -59,13 +79,22 @@ h1,h2,h3,h4,h5,h6,p {
     margin-left: auto;
     margin-right: auto;
 
-    outline: 2px solid red;
-    outline-offset: -2px;
+    /* outline: 2px solid red;
+    outline-offset: -2px; */
 }
 
 .section    {
     padding-top: 94px;
     padding-bottom: 94px;
+}
+
+.section-title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    text-align: center;
+    letter-spacing: 0.03em;
 }
 
 /* hidden */
@@ -85,9 +114,12 @@ h1,h2,h3,h4,h5,h6,p {
 
 /* Header section*/
 
+.header    {
+    border-bottom: 1px solid #ECECEC;
+}
+
 .header-container   {
     display: flex;
-    /* align-items: center; */
 }
 
 .header-nav {
@@ -124,7 +156,7 @@ h1,h2,h3,h4,h5,h6,p {
 .contacts-link    {
     display: block;
     padding-top: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 31px;
     font-weight: 500;
     font-size: 14px;
     line-height: calc(16 / 14);
@@ -170,7 +202,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 .hero-btn   {
-    display: block;
+    padding: 10px 22px;
     margin: 0 auto;
     font-weight: 700;
     font-size: 16px;
@@ -188,13 +220,13 @@ h1,h2,h3,h4,h5,h6,p {
 
 /* Feature section */
 
-.features-list  {
-    display: flex;
-    gap: 30px;
+.features   {
+    padding-bottom: 0;
 }
 
-.features-item  {
-    flex-basis: 270px;
+.features-list  {
+    display: flex;
+    gap: var(--indent);
 }
 
 .feature-title  {
@@ -207,37 +239,43 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 .feature-desc   {
+    width: 270px;
     font-size: 14px;
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     color:var(--secondary-txt-cl);
 }
 
-.work-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: calc(42 / 36);
-    text-align: center;
-    letter-spacing: 0.03em;
-}
+/* Work section */
+
+
+
+/* Team section */
 
 .team   {
     background-color:var(--light-bg-cl);
 }
 
-.team-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: calc(42 / 36);
-    text-align: center;
-    letter-spacing: 0.03em;
+.team-list  {
+    --items: 4;
 }
 
 .team-item  {
     background-color:var(--white-cl);
+    border-radius: 0px 0px 4px 4px;
+    /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2); */
+    
 }
 
+.team-wrap  {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 .team-subtitle  {
+    margin-bottom: 10px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: calc(19 / 16);
@@ -253,12 +291,17 @@ h1,h2,h3,h4,h5,h6,p {
     color:var(--secondary-txt-cl);
 }
 
+/* Footer section */
+
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color:var(--dark-bg-cl);
 }
 
 .footer-logo    {
     color: var(--white-cl);
+    /* margin-bottom: 20px; */
 }
 
 .address-desc   {
@@ -280,7 +323,18 @@ h1,h2,h3,h4,h5,h6,p {
     color: var(--white-cl);
 }
 
+/* Filters section */
+
+.filters-list   {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+
 .filter-btn {
+    padding: 6px 22px;
     font-weight: 500;
     font-size: 16px;
     line-height: calc(26 / 16);
@@ -288,7 +342,13 @@ h1,h2,h3,h4,h5,h6,p {
     letter-spacing: 0.03em; 
 }
 
+.project-wrap   {
+    padding: 20px 24px 19px;
+    border: 1px solid #EEEEEE;
+    border-top: none;
+}
 .project-title  {
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: calc(36 / 18);
