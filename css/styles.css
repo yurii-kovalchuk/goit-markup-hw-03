@@ -187,6 +187,8 @@ img {
 /* Hero section */
 
 .hero   {
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-color:var(--dark-bg-cl);
 }
 
